@@ -55,3 +55,6 @@ function hideBlock() {
 
 }
 /* ------------------------------------------------------------------------------ */
+function broken() {
+    alert("Current form not working due to an email address that has been deleted!")
+}
