@@ -1,0 +1,667 @@
+<!-- <?php
+            ob_start();
+                 if(isset($_POST['sendmail'])){
+                    mail($_POST['email'], 'Magazin' , 'Iti multumim pentru mesaj '.$_POST['name'].' !');
+                    header('Location: http://localhost/vaidaNela/index.php');
+                    exit(); 
+                } 
+            ob_end_flush();
+?> 
+ -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="resurse/img/favicon.png">
+    <!--  <link rel="stylesheet" href="alte fisiere/css/ionicons.min.css"> -->
+    <link rel="stylesheet" href="alte fisiere/css/normalize.css">
+    <link rel="stylesheet" href="alte fisiere/css/grid.css">
+    <link rel="stylesheet" href="resurse/css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="resurse/css/queries.css">
+
+    <title>P.F.A Vaida Nela</title>
+</head>
+
+
+
+
+
+
+
+
+
+
+<body>
+
+    <button onclick="topFunction()" id="btn-top">
+        <ion-icon name="caret-up-outline" id="topArrow"></ion-icon>
+    </button>
+
+
+
+    <button onclick='hideBlock()' class="hamburger">
+        <span>&mdash;</span>
+        <span>&mdash;</span>
+        <span>&mdash;</span>
+    </button>
+
+
+    <header>
+        <nav>
+            <div class="row">
+                <ul class="main-nav">
+                    <li><a href="#descriere">Descriere magazin</a></li>
+                    <li><a href="#adresa">Adresa</a></li>
+                    <li><a href="#recenzii">Recenzii</a></li>
+                    <li><a href="#promotii">Promotii</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="produse.html">Produse</a></li>
+                    <li class="cart"><a href="cart.html">
+                            <ion-icon name="cart-outline"></ion-icon><span>0</span>
+                        </a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="hero-text-box">
+            <h1>Cel mai bun magazin. <br> Cele mai bune preturi.</h1>
+            <a href="#adresa" class="btn btn-full">Vreau sa cumpar</a>
+            <a href="#promotii" class="btn btn-ghost">Arata-mi mai mult</a>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="descriere" class="section-features">
+
+
+
+
+        <div class="row">
+
+            <h2>IN AND OUT, CAT AI ZICE "PESTE"</h2>
+
+            <p class="long-copy">Stim ca esti ocupat, asa ca asteptarea la casa dureaza mai putin de 5 minute!</p>
+
+        </div>
+
+
+
+        <div class="row">
+
+            <div class="col span-1-of-4 box">
+
+                <ion-icon name="calendar-outline" class="icon-big icon"></ion-icon>
+
+                <h3>Deschis 7/7</h3>
+
+                <p>Vrei sa faci o pizza si nu ai ingredientele ? Ai nevoie de ulei pentru niste cartofi prajiti, dar
+                    este duminica ? Nu trebuie sa te mai ingrijorezi! Magazinul este deschis in fiecare zi, de dimineata
+                    pana seara.</p>
+
+            </div>
+
+
+
+            <div class="col span-1-of-4 box">
+
+                <ion-icon name="alarm-outline" class="icon-big icon"></ion-icon>
+
+                <h3>In 5 minute ai tot</h3>
+
+                <p>Personalul munceste cu spor asa ca daca ai nevoie de ceva, pleci cu el in mai putin de 5 minute. Ti
+                    le poate inmana chiar vanzatorul <strong>sau</strong> ti le poti lua chiar tu.</p>
+
+            </div>
+
+
+
+            <div class="col span-1-of-4 box">
+
+                <ion-icon name="egg-outline" class="icon-big icon"></ion-icon>
+
+                <h3>Produse organice</h3>
+
+                <p>Foarte multe produse sunt reprezentate de uleiuri, lactate, oua etc. Asa ca daca tii la dieta si
+                    sanatatea ta, poti da o fuga pana la noi si sa iti achizitionezi produsele</p>
+
+            </div>
+
+
+
+            <div class="col span-1-of-4 box">
+
+                <ion-icon name="checkmark-done-outline" class="icon-big icon"></ion-icon>
+
+                <h3>Gama variata</h3>
+
+                <p>Desi magazinul se mandreste cu produse naturale de calitate, poti gasi si o gama variata de tigari,
+                    bauturi alcoolice, dulciuri etc. Asa ca ce mai astepti ? Noi te asteptam aici!</p>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="section-meals">
+
+
+
+
+
+        <ul class="meals-showcase clearfix">
+
+            <li>
+
+                <figure class="meal-photo">
+
+                    <!-- poate contine o imagine cu un caption -->
+                    <img src="resurse/img/1.jpg" alt="Korean bibimbap with egg and vegetables">
+
+                </figure>
+
+            </li>
+
+
+            <li>
+                <figure class="meal-photo">
+
+                    <!-- poate contine o imagine cu un caption -->
+                    <img src="resurse/img/2.jpg" alt="Simple italian pizza with cherry tomatoes">
+
+                </figure>
+
+            </li>
+
+
+            <li>
+                <figure class="meal-photo">
+
+                    <!-- poate contine o imagine cu un caption -->
+                    <img src="resurse/img/3.jpg" alt="Chicken breast steak with vegetables ">
+
+                </figure>
+
+            </li>
+
+
+            <li>
+
+                <figure class="meal-photo">
+
+                    <!-- poate contine o imagine cu un caption -->
+                    <img src="resurse/img/4.jpg" alt="Autumn pumpkin soup">
+
+                </figure>
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+        <ul class="meals-showcase clearfix" id="test">
+
+            <li>
+
+                <figure class="meal-photo">
+
+                    <!-- poate contine o imagine cu un caption -->
+                    <img src="resurse/img/5.jpg" alt="Paleo beef steak with vegetables">
+
+                </figure>
+
+            </li>
+
+
+            <li>
+                <figure class="meal-photo">
+
+                    <!-- poate contine o imagine cu un caption -->
+                    <img src="resurse/img/6.jpg" alt="Healthy baguette with egg and vegetables">
+
+                </figure>
+
+            </li>
+
+
+            <li>
+                <figure class="meal-photo">
+
+                    <!-- poate contine o imagine cu un caption -->
+                    <img src="resurse/img/7.jpg" alt="Burger with cheddar and bacon">
+
+                </figure>
+
+            </li>
+
+            <li>
+
+
+                <figure class="meal-photo">
+
+                    <!-- poate contine o imagine cu un caption -->
+                    <img src="resurse/img/8.jpg"
+                        alt="Granola with cherries and strawberriesGranola with cherries and strawberries">
+
+                </figure>
+
+            </li>
+
+        </ul>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="functioneaza" class="section-steps">
+
+
+        <div class="row">
+
+            <h2>Cum functioneaza ?</h2>
+
+        </div>
+
+        <div class="row">
+
+
+
+            <div class="col span-1-of-2 steps-box">
+
+                <img src="resurse/img/app-iPhone.png" alt="iPhone" class="app-screen">
+
+            </div>
+
+            <div class="col span-1-of-2 steps-box">
+
+
+
+                <div class="works-step">
+
+                    <div>1</div>
+
+                    <p>Te gandesti la ce ai nevoie sa cumperi si te ridici de pe canapea.</p>
+
+                </div>
+
+                <div class="works-step">
+
+                    <div>2</div>
+
+                    <p>Te imbraci si dai o fuga pana la magazinul nostru, ce te asteapta voios.</p>
+
+                </div>
+
+                <div class="works-step">
+
+                    <div>3</div>
+
+                    <p>Ajungi la magazin iar in mai putin de 5 minute ai plecat fericit, cu produsele tale in plasa!</p>
+
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <section id="adresa" class="section-cities">
+        <div class="row">
+            <h2>Momentan, ne puteti gasi doar in Medgidia</h2>
+        </div>
+        <div class="row">
+            <div class="col span-1-of-2 container-feature">
+                <div class="city-feature city-detail">
+                    <ion-icon name="business-outline"></ion-icon>
+                    Medgidia
+                </div>
+                <div class="city-feature city-detail">
+                    <ion-icon name="send-outline"></ion-icon>
+                    Str.Rahovei 51A, Bl.C2, Sc.A
+                </div>
+                <div class="city-feature city-detail">
+                    <ion-icon name="hourglass-outline"></ion-icon>
+                    L-D: 8:00 &dash; 20:00
+                </div>
+            </div>
+
+            <div class="col mapouter google-maps span-1-of-2">
+                <div class="gmap_canvas">
+                    <iframe width="600" height="334" id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=Ber%C4%83rie%2C%20Medgidia%20905600%2C%20Rom%C3%A2nia&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                    </iframe>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <section id="recenzii" class="section-testimonial">
+        <div class="row">
+            <h2>Clientii nostri sunt pe primul loc!</h2>
+        </div>
+
+        <div class="row">
+            <div class="col span-1-of-3">
+                <blockquote>
+                    <!-- citat -->
+                    Magazinul este grozav, ce-i drept, nu este foarte mare, insa am putut gasi acolo tot ce am avut
+                    nevoie indiferent de ora.
+                    <cite class="cite-1"><img src="resurse/img/customer-1.jpg" alt="mitica varban"> Mitica Varban</cite>
+                </blockquote>
+            </div>
+
+            <div class="col span-1-of-3">
+                <blockquote>
+                    Produse ieftine, sanatoase si cu gust grozav. Ce ti-ai putea dori mai mult de la un magazin de
+                    genul? Totul este perfect!
+                    <cite class="cite-2"><img src="resurse/img/customer-2.jpg" alt="ioana maces">Ioana Maces</cite>
+                </blockquote>
+            </div>
+
+            <div class="col span-1-of-3">
+                <blockquote>
+                    Aveam nevoie de cateva ingrediente intr-o duminica dimineata, si imi era teama ca nu voi putea face
+                    mancarea pe care mi-o doream. Am avut noroc deoarece magazinul era deschis!
+                    <cite class="cite-1"><img src="resurse/img/customer-3.jpg" alt="milton chapman">Razvan Scaete</cite>
+                </blockquote>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+    <section id="promotii" class="section-plans">
+
+        <div class="row">
+            <h2>Promotiile curente</h2>
+        </div>
+
+        <div class="row">
+
+            <div class="col span-1-of-3">
+
+                <div class="plan-box plan-box-1">
+                    <div>
+                        <h3>Orice pachet de tigari</h3>
+                        <p class="plan-price">19RON/ <span>pachet</span> </p>
+
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                <ion-icon name="checkmark-circle-outline" class="icon-small"></ion-icon>
+                                Max. 1 pachet / zi / pers.
+                            </li>
+                            <li>
+                                <ion-icon name="checkmark-circle-outline" class="icon-small"></ion-icon>
+                                De luni pana miercuri
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div>
+                        <a onclick="thanks()" href="#promotii" id="btn-promotie" class="btn btn-ghost">Rezerva</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col span-1-of-3">
+
+                <div class="plan-box">
+                    <div>
+                        <h3>6+1 Beri</h3>
+                        <p class="plan-price">16RON/ <span>minibax</span> </p>
+
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                <ion-icon name="checkmark-circle-outline" class="icon-small"></ion-icon>
+                                Max. 3 minibaxuri / zi / pers.
+                            </li>
+                            <li>
+                                <ion-icon name="checkmark-circle-outline" class="icon-small"></ion-icon>
+                                De luni pana sambata
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div>
+                        <a onclick="thanks()" href="#promotii" id="btn-promotie" class="btn btn-ghost">Rezerva</a>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="col span-1-of-3">
+
+                <div class="plan-box">
+                    <div>
+                        <h3>Oua naturale</h3>
+                        <p class="plan-price">27RON/ <span>cofraj</span> </p>
+
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                <ion-icon name="checkmark-circle-outline" class="icon-small"></ion-icon>
+                                Fara limita
+                            </li>
+                            <li>
+                                <ion-icon name="checkmark-circle-outline" class="icon-small"></ion-icon>
+                                In orice zi a saptamanii
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div>
+                        <a onclick="thanks()" href="#promotii" id="btn-promotie" class="btn btn-ghost">Rezerva</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <section id="contact" class="section-form">
+        <div class="row">
+            <h2>Ne bucuram de fiecare data cand ne scrii</h2>
+        </div>
+
+        <div class="row">
+
+
+            <form method="post" action="#" class="contact-form" autocomplete="off">
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="name">Nume</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="text" name="name" id="name" placeholder="Numele tau" required>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="email" name="email" id="email" placeholder="Emailul tau" required>
+                    </div>
+                </div>
+
+
+
+
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="find-us">Cum ai aflat de noi?</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <select name="find-us" id="find-us">
+                            <option value="friends" selected>Prieteni</option>
+                            <option value="search">Motor de cautare</option>
+                            <option value="other">Alta sursa</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label>Newsletter</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="checkbox" name="newsletter" id="newsletter" checked>Da, va rog
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label>Mesaj</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <textarea name="message" placeholder="Mesajul tau" require></textarea>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label>&nbsp;</label>
+                    </div>
+                    <div class="col span-2-of-3 btn-send">
+                        <input name="sendmail" type="submit" value="Trimite!">
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <div class="row">
+            <div class="col span-1-of-2">
+                <ul class="footer-nav">
+                    <li><a href="https://anpc.ro/">ANPC</a></li>
+                    <li><a href="https://anpc.ro/articol/935/ce-inseamna-sal">ANPC - SAL</a></li>
+                </ul>
+            </div>
+            <div class="col span-1-of-2">
+                <ul class="social-links">
+                    <li>
+                        <a href="https://twitter.com/">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+                    <li><a href="https://www.facebook.com/">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a></li>
+                    <li><a href="https://mail.google.com/">
+                            <ion-icon name="logo-google"></ion-icon>
+                        </a></li>
+                    <li><a href="https://www.instagram.com/">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="row">
+                <p>Copyright &copy; 2020 by Vaida Nela. All rights reserved.</p>
+                <p>*Pentru sectiunea promotii, produsele trebuie rezervate inainte de achizitie</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+
+
+
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+<script src="index.js"></script>
+<script src="produse.js"></script>
+
+</html>

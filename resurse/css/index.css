@@ -1,0 +1,673 @@
+/* ------------------------------- */
+/*               GENERIC           */
+/* ------------------------------- */
+
+
+body::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-track{
+    background:#1e1e24;
+}
+body::-webkit-scrollbar-thumb{
+    background: #e67e22;
+
+}
+
+
+.hamburger{
+    display:none;    
+    position: fixed;        
+    top: 20px;           
+    left: 30px;            
+    z-index: -1;           
+    border: none;           
+    outline: none;           
+    background-color: #e67e22; 
+    color: #000;          
+    cursor: pointer;        
+    padding: 15px;           
+    border-radius: 30%;     
+    font-size: 17px;  
+    transition: 0.4s;      
+  }
+
+
+button span{
+    display: block;
+    margin: -10px;
+    margin-top: -15px;
+}
+
+#btn-top {
+    display:none;     /* Va fi ascuns la inceput */
+    position: fixed;        /* Il fixez pentru a ramana mereu acolo in timpul scrolului */
+    bottom: 20px;           
+    right: 30px;            
+    z-index: 99;           
+    border: none;           
+    outline: none;           
+    background-color: #e67e22; 
+    color: #000;          
+    cursor: pointer;         /* Add a mouse pointer on hover */
+    padding: 15px;           
+    border-radius: 30%;     
+    font-size: 17px;  
+    transition: 0.4s;      
+  }
+
+    #topArrow{
+        font-size: 150%;
+    }
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    
+}
+
+html, body{
+    background-color:#fff;
+    color: rgb(78, 77, 77);
+    font-family: 'Lato','Arial', sans-serif;/* 1st Lato else Arial else sans-serif */
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility; /* fonts will render in a perfect way */
+    overflow-x:hidden;
+}
+
+
+/* CLEAR FLOATURILOR PT CA AVEAM PROBLEME CU PADDINGUL */
+.clearfix{
+    zoom:1;
+}
+
+.clearfix:after{
+    content:'.';
+    clear:both;
+    display: block;
+    height:0;
+    visibility: hidden;
+
+}
+
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+header{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7) ), url(img/medgidia.jpg); /* prima chestie este un background transparent peste imagine pentru contrastul dintre scris si imagine */
+    height: 100vh; /* 100% din viewport, adica marimea ferestrei */
+    background-size: cover; /* am acoperit toata fereastra cu imaginea */
+    background-position: center; 
+    background-attachment: fixed;
+}
+
+
+.hero-text-box{
+    position: absolute; /* singura modalitatea prin care o putem centra vertical si orizontal */
+    width: 1140px;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%); /* translateaza cu jumatate din width si height in stanga si in dreapta */
+}
+
+h1,h2,h3{
+    font-weight: 300;
+    text-transform: uppercase;
+   
+       
+    
+}
+h1{
+    color: #fff;
+    font-size: 250%; /* = 2 * 20px din font-sizeul html */
+    margin-bottom: 25px;
+    margin-top: 0;
+    word-spacing: 0;
+    letter-spacing: 1px;
+}
+
+h2{
+    font-size: 180%;
+    word-spacing: 3px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h2:after{ /* apare DUPA h2, la fel cum sugereaza numele */
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content:" "; /*obligatoriu pentru :after pentru a baga content "gol" in h2; pentru a nu baga cuvinte*/
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 30px;
+
+}
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+
+.long-copy{ /* descrierea de dinaintea coloanelor */
+     line-height: 150%; /* distanta dintre randuri */
+     width: 70%;
+     margin-left: 15%;
+     text-align: center;
+
+} 
+
+.box{ /* coloanele "col" */
+    padding: 1%;
+}
+
+.box p{
+    font-size: 90%;
+    line-height: 150%;
+    text-align: justify;
+}
+
+section{
+    padding: 80px 0;
+}
+/* --------------------------------------- */
+
+
+
+
+
+
+
+
+/* ---------------- */
+/*     ICONURI      */
+/* ---------------- */
+.icon-big{
+    font-size: 350%;
+    display:block;
+    color: orange;
+    margin-bottom: 10px;
+    margin-left: 80px;
+}
+
+/* ------------------------------- */
+
+
+
+
+
+
+
+
+/* -------------------------------- */
+/*         MEALS SHOWCASE           */
+/* -------------------------------- */
+.meals-showcase{
+    list-style: none;
+    width: 100%;
+}
+
+.meals-showcase li{
+    display: block;
+    float: left;
+    width: 25%;
+    margin-top: -4px;
+}
+
+
+.meal-photo{
+    width: 100%; /* aceeasi valoare ca a parintelui ^ */
+    margin: 0;
+    overflow: hidden;/* ascundem overflowul => adica ce da pe afara din cauza tranzitiei de mai jos */
+    background-color: black;
+    margin-top: 4px;
+}
+.meal-photo img{
+    width: 100%;
+    height: auto;
+    transform: scale(1.15); /* vom scala imaginea => imaginea face overflow din cauza asta*/
+    opacity: 0.5; /* mai inchisa la culoare la inceput */
+   
+}
+
+
+.meal-photo img:hover{
+    transform: scale(1.03);
+    transition: 0.6s;
+    opacity: 1; /* cand se face hover, opacitatea va deveni 1, adica transparent 100% */
+}
+
+
+.section-meals{
+    padding: 0;
+}
+
+/* --------------------------------- */
+
+
+
+/* -------------------------------------------- */
+/*          BUTOANE PAGINA PRINCIPALA           */
+/* -------------------------------------------- */ 
+.btn:link, .btn:visited,
+input[type=submit]{/* pseudo-clasa */
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.25s, border 0.25s, color 0.25s; /* transitie intre culori */
+}
+
+.btn-full:link, .btn-full:visited,
+input[type=submit]{
+    background-color: #e67e22;
+    border-radius: 200px;
+    border: 1px solid #e67e22;
+    color: #fff;
+}
+
+.btn-ghost:link, .btn-ghost:visited{
+    border: 1px solid #e67e22;
+    border-radius: 200px;
+    color:#e67e22;
+    margin-left: 20px;
+}
+
+.btn:hover, .btn:active,input[type=submit]:hover, input[type=submit]:active{
+    background-color: #cf6d17;
+}
+
+.btn-full:hover, .btn-full:active,
+input[type=submit]{
+    border: 1px solid #cf6d17;
+ 
+}
+
+.btn-ghost:hover, .btn-ghost:active{
+    border: 1px solid #cf6d17;
+    color:#cf6d17;
+    color: #fff;
+}
+/* ----------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ */
+/*         FORMATARE NAVBAR       */
+/* ------------------------------ */
+.logo{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin: 20px;
+}
+
+.main-nav{
+    float: right;
+    list-style: none; /* scapam de punctele listei */
+    margin-top: 55px;
+    width: 100%;
+    
+}
+
+.main-nav li{
+    display: inline; /* din block le facem elemente inline ca sa fie una langa alta */
+    margin-left: 60px;
+}
+
+.main-nav li a:link, .main-nav li a:visited{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%; /* 90% din 20px, de mai sus din font-size html */
+    border-bottom: 2px solid transparent; /* avem nevoie de ea pentru tranzitie */
+    transition: border-bottom 0.2s; /* actioneaza la hover */
+    padding: 5px 0;
+
+}
+
+.main-nav li a:hover, .main-nav li a:active{
+   border-bottom: 2px solid #e67e22;
+    
+}
+/* -------------------------------- */
+
+
+/* ------------------------- */
+/* CUM FUNCTIONEAZA          */
+/* ------------------------- */
+
+
+.section-steps{
+    background-color: rgb(230, 230, 230);
+}
+
+
+.steps-box:first-child{
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30px;
+}
+
+.steps-box:last-child{
+    padding-left: 3%;
+    margin-top: 70px;
+}
+
+.app-screen{
+    width: 40%;
+}
+
+
+.works-step{
+    margin-bottom: 50px;
+}
+
+.works-step div{
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block; /* ne asiguram asa ca nu exista line-break */
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+   /*  float: left; */
+    font-size: 150%;
+    margin-right: 25px;
+}
+/* ---------------------------------------------*/
+
+
+
+
+
+/* ------------------------- */
+/*          ORASE            */
+/* ------------------------- */
+
+.box img{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+.box .city{
+    margin-top: 10px;
+}
+
+.icon-small{
+    display:inline-block;
+    color: orange;
+
+}
+
+
+
+
+/* -------------------------- */
+
+
+
+
+
+/* ------------------------- */
+/*       TESTIMONIALS        */
+/* ------------------------- */
+
+.section-testimonial{
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(img/medgidia-2.jpg); /* culoare gri peste poza */
+    background-size:cover;
+    color: #fff; /* culoarea scrisului va fi alba pentru a se distinge de background */
+    background-attachment: fixed; /* imaginea sta in acelasi loc cand dai scroll*/
+}
+
+blockquote{
+    padding: 2%;
+    font-style: italic; /* daca nu aveam fontul cu optiunea italic, nu functiona comanda */
+    line-height: 150%;
+}
+
+
+cite{
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+blockquote:before{
+    content: "\201C"; /* pentru quote */
+    font-size: 400%;
+   
+}
+
+cite img{
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle; /* alinieaza pe verticala scrisul */
+}
+
+/* ---------------------------- */
+
+
+
+
+
+
+/* ------------------------- */
+/*       SIGN UP OFFERS      */
+/* ------------------------- */
+
+
+.section-plans{
+    background-color: rgb(230, 230, 230);
+}
+
+.plan-box{
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 0 2px 2px rgb(179, 179, 179); /* x, y, blur, culoare */
+}
+
+
+.plan-box div:first-child{
+    background-color: rgb(240, 217, 188);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; /* exact ce zice si numele */
+}
+
+.plan-box div:last-child{
+    text-align: center;
+    border: none;
+}
+
+.plan-box ul{
+    list-style: none;
+}
+
+.plan-box ul li{
+    padding: 5px 0;
+}
+
+.plan-box div{
+    padding: 15px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.plan-price{
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color:#e67e22;
+  
+}
+
+.plan-price span{
+    font-size: 70%;
+}
+
+.plan-price-meal{
+    font-size: 80%;
+    text-align: center;
+}
+
+/* ------------------------- */
+
+
+/* ------------------------- */
+/*       CONTACT-FORM        */
+/* ------------------------- */
+
+.contact-form  {
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text], input[type = email], select, textarea{  /* asa formatez toate sectiunile, mai putin checkboxul pentru ca ar fi aratat ciudat */
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+
+textarea{
+    height: 100px;
+}
+
+input[type = checkbox]{
+    margin: 12px 10px 12px 0;
+}
+
+*:focus{
+    outline:none;
+}
+
+/* ------------------------- */
+
+
+
+
+
+
+/* ------------------------- */
+/*         FOOTER            */
+/* ------------------------- */
+
+footer{
+    background-color: rgb(65, 65, 65);
+    padding: 40px;
+}
+footer p{
+    color: #e67e22;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: -10px;
+}
+
+
+.footer-nav a:link, .social-links a:link,.footer-nav a:visited, .social-links a:visited{
+    color:#969696;
+    text-decoration: none;
+    border: 0;
+    
+}
+
+.footer-nav a:hover, .footer-nav a:active,.social-links a:hover, .social-links a:active{
+    color:#e67e22;
+    transition: color 0.4s;
+}
+
+.footer-nav{
+    list-style: none;
+    float:left;
+}
+
+
+.social-links{
+    list-style:none;
+    float: right;
+    font-size: 200%;
+}
+
+.footer-nav li, .social-links li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child, .social-links li:last-child{
+    margin-right: 0;
+}
+
+
+
+
+
+/* ------------------------- */
+
+
+
+
+
+
+/* ------------------------- */
+/*         GOOGLE MAPS       */
+/* ------------------------- */
+
+
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 334px;
+    width: 600px;
+    margin-left: 550px;
+    margin-top: -240px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 334px;
+    width: 600px;
+}
+
+
+.city-detail{
+    width: 100%;
+    padding-top: 60px;
+    padding-left: 150px;
+    display: block;
+    margin-left: -130px;
+
+}
+
+
+
+
+/* ---------------------------- */

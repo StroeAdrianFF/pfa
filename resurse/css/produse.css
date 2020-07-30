@@ -1,0 +1,448 @@
+body::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-track{
+    background:#1e1e24;
+}
+body::-webkit-scrollbar-thumb{
+    background: #e67e22;
+
+}
+
+
+
+h1,h2,h3{
+    font-weight: 300;
+    text-transform: uppercase;
+   
+       
+    
+}
+h1{
+    color: #fff;
+    font-size: 250%; /* = 2 * 20px din font-sizeul html */
+    margin-bottom: 25px;
+    margin-top: 0;
+    word-spacing: 0;
+    letter-spacing: 1px;
+}
+
+h2{
+    font-size: 180%;
+    word-spacing: 3px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h2:after{ /* apare DUPA h2, la fel cum sugereaza numele */
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content:" "; /*obligatoriu pentru :after pentru a baga content "gol" in h2; pentru a nu baga cuvinte*/
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 30px;
+
+}
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+html, body{
+    background-image: url(img/medgidia.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: rgb(78, 77, 77);
+    font-family: 'Lato','Arial', sans-serif;/* 1st Lato else Arial else sans-serif */
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility; /* fonts will render in a perfect way */
+    overflow-x:hidden;
+}
+
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    
+}
+
+
+header{
+    background-size: cover; /* am acoperit toata fereastra cu imaginea */
+    background-position: center; 
+    background-attachment: fixed;
+}
+
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+.main-nav{
+    margin-top: 55px;
+}
+
+.main-nav li{
+    display: inline; /* din block le facem elemente inline ca sa fie una langa alta */
+    margin-left: 80px;
+}
+
+.main-nav li a:link, .main-nav li a:visited{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%; /* 90% din 20px, de mai sus din font-size html */
+    border-bottom: 2px solid transparent; /* avem nevoie de ea pentru tranzitie */
+    transition: border-bottom 0.2s; /* actioneaza la hover */
+    padding: 5px 0;
+
+}
+
+.main-nav li a:hover, .main-nav li a:active{
+   border-bottom: 2px solid #e67e22;
+    
+}
+
+
+.plan-box{
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90%;
+    margin-top: 20%;
+    box-shadow: 0 2px 2px rgb(179, 179, 179); /* x, y, blur, culoare */
+}
+
+
+.plan-box div:first-child{
+    background-color: rgb(240, 217, 188);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; /* exact ce zice si numele */
+}
+
+.plan-box div:last-child{
+    text-align: center;
+    border: none;
+}
+
+.plan-box ul{
+    list-style: none;
+}
+
+.plan-box ul li{
+    padding: 5px 0;
+}
+
+.plan-box div{
+    padding: 15px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.plan-price{
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color:#e67e22;
+  
+}
+
+.plan-price span{
+    font-size: 70%;
+}
+
+.plan-price-meal{
+    font-size: 80%;
+    text-align: center;
+}
+
+
+.icon-small{
+    display:inline-block;
+    color: orange;
+
+}
+
+.btn:link, .btn:visited{/* pseudo-clasa */
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.25s, border 0.25s, color 0.25s; /* transitie intre culori */
+}
+
+
+
+.btn-ghost:link, .btn-ghost:visited{
+    border: 1px solid #e67e22;
+    border-radius: 200px;
+    color:#e67e22;
+    margin-left: 20px;
+}
+
+.btn:hover, .btn:active{
+    background-color: #cf6d17;
+}
+
+
+.btn-ghost:hover, .btn-ghost:active{
+    border: 1px solid #cf6d17;
+    color:#cf6d17;
+    color: #fff;
+}
+
+#p1{
+    background-image: url(img/oua.jpg);
+    background-size: cover;
+    padding-top: 100%;
+    background-position: 40%;
+}
+
+#p2{
+    background-image: url(img/ulei.jpg);
+    background-size: cover;
+    padding-top: 100%;
+    background-position: 40%;
+    
+}
+#p3{
+    background-image: url(img/tigari.jpg);
+    background-size: cover;
+    padding-top: 100%;
+    background-position: 40%;
+}
+#p4{
+    background-image: url(img/paine.jpg);
+    background-size: cover;
+    padding-top: 100%;
+    background-position: 40%;
+}
+#p5{
+    background-image: url(img/lapte.jpg);
+    background-size: cover;
+    padding-top: 100%;
+    background-position: 40%;
+}
+#p6{
+    background-image: url(img/lays.jpg);
+    background-size: cover;
+    padding-top: 100%;
+    background-position: 40%;
+}
+#p7{
+    background-image: url(img/salam.jpg);
+    background-size: cover;
+    padding-top: 100%;
+    background-position: 40%;
+}
+#p8{
+    background-image: url(img/faina.jpg);
+    background-size: cover;
+    padding-top: 100%;
+    background-position: 40%;
+}
+#p9{
+    background-image: url(img/7days.jpg);
+    background-size: cover;
+    padding-top: 100%;
+    background-position: 40%;
+}
+#p10{
+    background-image: url(img/zahar.jpg);
+    background-size: cover;
+    padding-top: 100%;
+    background-position: 40%;
+}
+#p11{
+    background-image: url(img/skol.jpg);
+    background-size: cover;
+    padding-top: 100%;
+    background-position: 40%;
+}
+#p12{
+    background-image: url(img/apa.jpg);
+    background-size: cover;
+    padding-top: 100%;
+    background-position: 40%;
+}
+
+
+/* ------------------------------------------------------- */
+/*                       CART                              */
+
+.products-container{
+    background-color: rgba(241, 158, 32, 0.5);
+    color: #fff;
+    margin: 60px 200px 0px 200px;
+}
+
+.container-products ion-icon {
+    font-size: 25px;
+    color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.product-header {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid lightgray;
+    margin: 0 auto;
+}
+
+.product-title {
+    width: 45%;
+    border-bottom: 1px solid lightgray;
+    padding-left: 30%;
+}
+
+.price {
+    width: 15%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.quantity {
+    width: 30%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.total {
+    width: 10%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.product {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid lightgray;
+}
+
+ion-icon {
+    cursor: pointer;    
+}
+
+.products {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.products img {
+    width: 75px;
+}
+
+.basketTotalContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.basketTotalTitle {
+    width: 30%;
+}
+
+.basketTotal {
+    width: 10%;
+}
+
+@media only screen and (max-width: 500px) {
+    nav h2 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;;
+    }
+
+    .sm-hide {
+        display: none;;
+    }
+
+    .products,
+    .product-header {
+        justify-content: center;
+    }
+
+    .basketTotalContainer {
+        padding-right: 8%;
+    }
+}
+
+@media only screen and (max-width: 767px){
+.main-nav li{
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 120%;
+}}
+
+
+/* ----------------------------------------------------------- */
+/*                             BUTON                             */
+
+.hamburger{
+    display:inline-block;    
+    position: fixed;        
+    top: 20px;           
+    left: 30px;            
+    z-index: -1;           
+    border: none;           
+    outline: none;           
+    background-color: #e67e22; 
+    color: #000;          
+    cursor: pointer;        
+    padding: 15px;           
+    border-radius: 30%;     
+    font-size: 17px;  
+    transition: 0.4s;      
+  }
+
+
+button span{
+    display: block;
+    margin: -10px;
+    margin-top: -15px;
+}
+
+
+#btn-top {
+    display:none;     /* Va fi ascuns la inceput */
+    position: fixed;        /* Il fixez pentru a ramana mereu acolo in timpul scrolului */
+    bottom: 20px;           
+    right: 30px;            
+    z-index: 99;           
+    border: none;           
+    outline: none;           
+    background-color: #e67e22; 
+    color: #000;          
+    cursor: pointer;         /* Add a mouse pointer on hover */
+    padding: 15px;           
+    border-radius: 30%;     
+    font-size: 17px;  
+    transition: 0.4s;      
+  }
+
+    #topArrow{
+        font-size: 150%;
+    }
