@@ -9,7 +9,9 @@
 ?> 
  -->
 
-
+<script>
+            alert("The contact form positioned next to the webpage's footer is not working anymore due to an email addres that has been deleted!");
+</script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,11 +42,7 @@
 
 <body>
 
-    <button onclick="topFunction()" id="btn-top">
-        <ion-icon name="caret-up-outline" id="topArrow"></ion-icon>
-    </button>
-
-
+    
 
     <button onclick='hideBlock()' class="hamburger">
         <span>&mdash;</span>
@@ -609,7 +607,7 @@
                         <label>&nbsp;</label>
                     </div>
                     <div class="col span-2-of-3 btn-send">
-                        <input name="sendmail" type="submit" value="Trimite!">
+                        <a href="#contact" onclick="broken()" class="btn btn-full">Vreau sa cumpar</a>
                     </div>
                 </div>
             </form>
