@@ -55,5 +55,3 @@ function hideBlock() {
 
 }
 /* ------------------------------------------------------------------------------ */
-
-alert("De retinut: Formularul din josul paginii nu mai este functional deoarece adresa de email a magazinului nu mai exista !")
