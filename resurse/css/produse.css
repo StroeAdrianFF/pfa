@@ -368,6 +368,13 @@ ion-icon {
     width: 10%;
 }
 
+@media only screen and (max-width: 1920px){
+    .hamburger2, .hamburger3{                     
+        display: none;
+    }
+}
+
+
 @media only screen and (max-width: 500px) {
     nav h2 {
         width: 100%;
@@ -396,6 +403,42 @@ ion-icon {
     margin-top: 20px;
     font-size: 120%;
 }}
+
+.hamburger3{
+        display:block;    
+        position: fixed;        
+        top: 20px;           
+        left: 30px;            
+        z-index: 99;           
+        border: none;           
+        outline: none;           
+        background-color: #e67e22; 
+        color: #000;          
+        cursor: pointer;        
+        padding: 15px;           
+        border-radius: 20%;     
+        font-size: 17px;  
+        transition: 0.4s;      
+      }
+
+    .hamburger2{
+        display:block;    
+        position: fixed;        
+        top: 20px;           
+        left: 30px;            
+        z-index: 99;           
+        border: none;           
+        outline: none;           
+        background-color: #e67e22; 
+        color: #000;          
+        cursor: pointer;        
+        padding: 15px;           
+        border-radius: 20%;     
+        font-size: 17px;  
+        transition: 0.4s;      
+      }
+
+
 
 
 /* ----------------------------------------------------------- */
