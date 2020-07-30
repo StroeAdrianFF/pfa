@@ -24,7 +24,7 @@
 
     <section>
 
-        <button onclick="topFunction()" id="btn-top">
+        <button onclick="topFunction2()" id="btn-top">
             <ion-icon name="caret-up-outline" id="topArrow"></ion-icon>
         </button>
 
@@ -302,11 +302,60 @@
 
 
 </body>
+<script>
+    //preiau butonul
+    mybutton = document.getElementById("btn-top");
 
+    //cand se da scroll >20 px se afiseaza butonul
+    window.onscroll = function () {
+        scrollFunction2()
+        var currentScrolPos = window.pageYOffset;
+
+        if (currentScrolPos > 20) {
+            document.getElementsByClassName('hamburger2')[0].style.display = 'none';
+
+        } else {
+            document.getElementsByClassName('hamburger2')[0].style.display = 'inline-block';
+        }
+    };
+
+
+
+    function scrollFunction2() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+
+
+    }
+
+    // cand se da click pe buton, se trimite in capul paginii
+    function topFunction2() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+
+
+    }
+
+
+
+    function hideBlock() {
+        var x = document.querySelectorAll('.main-nav li');
+        for (var i = 0; i < x.length; i++) {
+            if (x[i].style.display === 'none') {
+                x[i].style.display = 'block'
+            } else {
+                x[i].style.display = 'none'
+            }
+        }
+
+    }
+</script>
 
 
 <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
-<script src="index.js"></script>
 <script src="produse.js"></script>
 
 </html>
